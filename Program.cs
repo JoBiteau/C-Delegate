@@ -8,13 +8,13 @@ namespace DelegateApp1
     {
         static void Main(string[] args)
         {
-            int[] data = new int[] { 12, 11 };
+            int[] data = new int[] { 12, 5 };
 
             Calculer calculer = new Calculer(Calcul.Additionner);
             calculer += Calcul.Multiplier;
             calculer += Calcul.Soustraire;
 
-            int result = Compute(data, Calcul.Soustraire);
+            int result = Compute(data, data => { return data[0] - data[1]; });
 
             Console.WriteLine($"{result}");
             Console.ReadLine();

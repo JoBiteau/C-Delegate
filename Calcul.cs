@@ -39,5 +39,6 @@ namespace DelegateApp1
 
             return resultat;
         }
+        
     }
 }
