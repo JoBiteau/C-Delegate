@@ -28,5 +28,16 @@ namespace DelegateApp1
 
             return resultat;
         }
+        public static int Soustraire(int[] elements)
+        {
+            int resultat = elements[0];
+
+            for(int key = 1; key < elements.Length; key++)
+            {
+                resultat -= elements[key];
+            }
+
+            return resultat;
+        }
     }
 }
